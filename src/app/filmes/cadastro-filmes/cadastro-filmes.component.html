@@ -4,13 +4,13 @@
     <form [formGroup]="cadastro" (ngSubmit)="salvar()" (ngReset)="reiniciarForm()">
       <mat-card-content>
           <mat-form-field class="full-width">
-            <input matInput formControlName="titulo" placeholder="Título">
+            <input matInput formControlName="titulo" placeholder="Título *">
           </mat-form-field>
           <mat-form-field class="full-width">
             <input matInput formControlName="urlFoto" placeholder="Link Foto">
           </mat-form-field>
           <mat-form-field class="full-width">
-              <input matInput readonly [matDatepicker]="picker" placeholder="Data de Lançamento" formControlName="dtLancamento" (click)="picker.open()">
+              <input matInput readonly [matDatepicker]="picker" placeholder="Data de Lançamento *" formControlName="dtLancamento" (click)="picker.open()">
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -24,7 +24,7 @@
             <input matInput formControlName="urlIMDb" placeholder="Link IMDb">
           </mat-form-field>
           <mat-form-field class="full-width">
-            <mat-select placeholder="Gênero" formControlName="genero">
+            <mat-select placeholder="Gênero *" formControlName="genero">
               <mat-option value="Ação">Açao</mat-option>
               <mat-option value="Aventura">Aventura</mat-option>
               <mat-option value=">Ficção Científica">Ficção Científica</mat-option>
