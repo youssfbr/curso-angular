@@ -33,4 +33,8 @@ export class CadastroFilmesComponent implements OnInit {
     alert('SUCESSO!!\n\n' + JSON.stringify(this.cadastro.value, null, 4));
   }
 
+  reiniciarForm(): void {
+    this.cadastro.reset();
+  }
+
 }

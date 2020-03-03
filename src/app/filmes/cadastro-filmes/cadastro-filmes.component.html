@@ -1,7 +1,7 @@
 <mat-toolbar class="app-title">Cadastrar Filme</mat-toolbar>
 <div class="main-div">
   <mat-card class="center width50">
-    <form [formGroup]="cadastro" (ngSubmit)="salvar()" >
+    <form [formGroup]="cadastro" (ngSubmit)="salvar()" (ngReset)="reiniciarForm()">
       <mat-card-content>
           <mat-form-field class="full-width">
             <input matInput formControlName="titulo" placeholder="Título">
@@ -35,7 +35,7 @@
       </mat-card-content>
         <mat-card-actions>
           <button type="submit" mat-raised-button>Salvar</button>
-          <button color="warn" mat-raised-button>Cancelar</button>
+          <button type="reset" color="warn" mat-raised-button>Cancelar</button>
         </mat-card-actions>
     </form>
   </mat-card>
