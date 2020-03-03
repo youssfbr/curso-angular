@@ -12,7 +12,7 @@ export class CadastroFilmesComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
 
     this.cadastro = this.fb.group({
       titulo: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(256)]],
@@ -23,6 +23,13 @@ export class CadastroFilmesComponent implements OnInit {
       urlIMDb: ['', [Validators.minLength(10)]],
       genero: ['', [Validators.required]]
     });
+  }
+
+  salvar(): void {
+    if (this.cadastro.invalid) {
+      return;
+    }
+    console.log(this.cadastro.value);
   }
 
 }
