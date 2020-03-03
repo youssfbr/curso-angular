@@ -29,7 +29,8 @@ export class CadastroFilmesComponent implements OnInit {
     if (this.cadastro.invalid) {
       return;
     }
-    console.log(this.cadastro.value);
+
+    alert('SUCESSO!!\n\n' + JSON.stringify(this.cadastro.value, null, 4));
   }
 
 }
