@@ -15,7 +15,7 @@ export class CadastroFilmesComponent implements OnInit {
   ngOnInit() {
 
     this.cadastro = this.fb.group({
-      titulo: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
+      titulo: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(256)]],
       urlFoto: ['', [Validators.minLength(10)]],
       dtLancamento: ['', [Validators.required]],
       descricao: [''],
@@ -23,7 +23,6 @@ export class CadastroFilmesComponent implements OnInit {
       urlIMDb: ['', [Validators.minLength(10)]],
       genero: ['', [Validators.required]]
     });
-
   }
 
 }
